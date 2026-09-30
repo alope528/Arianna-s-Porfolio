@@ -1,0 +1,19 @@
+/* CSS by Arianna Lopez
+   This file contains the styles for my portfolio website.
+   Last updated: 2024-06-10
+*/
+/* Color Palette 
+ soft pink= #A27A86
+ gray brown = #77686D
+ pink = #CB7790
+ muted brown = #4D363D
+ brown = #331C23
+ reddish brown = #33131D
+
+*/
+
+/* GLOBAL (base) MOBILE STYLES */
+
+body {
+    background-color: #A27A86;
+}
