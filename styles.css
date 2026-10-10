@@ -46,18 +46,26 @@ main {
   grid-template-columns: 1fr;
   background-color: #8e839b;
   gap: 1.5rem;
+  border-radius: 35px;
 }
 
 section {
   background-color: #e7ebfa;
   padding: 1rem;
   border: 2px solid #c5d2f8;
-  border-radius: 8px;
+  border-radius: 15px;
+}
+
+footer {
+  background-color: #320b35;
+  color: #c5d2f8;
+  text-align: center;
+  padding: 2rem;
 }
 
 .project-card {
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 15px;
   transition: transform 0.3s ease;
 }
 
@@ -70,6 +78,65 @@ footer {
   color: #c5d2f8;
   text-align: center;
   padding: 2rem;
+}
+
+.resume-skills h2 {
+  text-align: center;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.skill-group h3 {
+  text-align: center;
+}
+
+.skill-group ul {
+  width: fit-content;
+  margin: 1rem auto;
+  padding-left: 1.5rem;
+}
+
+/* HOME PAGE STYLES */
+
+.home-intro {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.home-intro img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 15px;
+}
+
+.contact-info {
+  text-align: center;
+}
+
+/*ABOUT PAGE STYLES*/
+
+.about-intro {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.about-photo {
+  width: 100%;
+  max-width:350px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 15px;
+  border: 2px solid #C5D2F8;
 }
 
 /* NAVIGATION STYLES */
@@ -94,11 +161,17 @@ nav a {
   color: #f7f5f6;
   text-decoration: none;
   font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
 nav a:hover,
 nav a:focus {
   color: #c5d2f8;
+  background-color: #320b35;
+  border-color: #c5d2f8;
 }
 
 /*PROJECT CARDS*/
@@ -114,7 +187,8 @@ nav a:focus {
 
 .project-card img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
   border-radius: 8px;
   margin-bottom: 1rem;
 }
@@ -130,23 +204,34 @@ h3 {
 
 header h1 {
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 2.75rem;
+  font-size: 2.5rem;
+  font-weight: 700;
   color: #c5d2f8;
   margin: 1rem;
+
+letter-spacing: 0.08em;
+text-shadow:
+    0 0 8px #8E839B,
+    0 0 18px #6D3F63;
 }
+
+
 
 h2 {
   font-size: 1.75rem;
   margin-top: 0.75rem;
+  text-align: center;
 }
 
 h3 {
   font-size: 1.4rem;
   margin-top: 0.75rem;
+  text-align: center;
 }
 
 p {
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem auto;
+  max-width: 800px;
 }
 
 main a {
@@ -158,6 +243,23 @@ main a:hover,
 main a:focus {
   color: #6d3f63;
   text-decoration: underline;
+}
+
+/*TEXT-DECORATION*/
+
+header h1::before {
+  content: "✦ ";
+}
+
+header h1::after {
+  content: " ✦";
+}
+h2::before {
+  content: "✦ ";
+}
+
+h2::after {
+  content: " ✦";
 }
 
 /* MEDIA QUERIES FOR TABLET AND DESKTOP */
@@ -176,4 +278,21 @@ main a:focus {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .home-intro {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .about-intro {
+  grid-template-columns: 1fr auto;
+}
+
+.about-photo {
+  width: 300px;
+}
 }
