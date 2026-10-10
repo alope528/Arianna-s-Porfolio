@@ -1,173 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap");
+
 /* CSS by Arianna Lopez
    This file contains the styles for my portfolio website.
    Last updated: 2024-06-10
 */
 /* Color Palette 
- soft pink= #A27A86
- gray brown = #77686D
- pink = #CB7790
- muted brown = #4D363D
- brown = #331C23
- reddish brown = #33131D
+Deep Purple:       #320B35 | Header, footer, dark text
+Muted Plum:        #6D3F63 | Outer background, navigation, links, accents
+Dusty Lavender:    #8E839B | main background
+Periwinkle:        #C5D2F8 | Header Text, borders, hover accents
+Soft Periwinkle:   #E7EBFA | sections and project cards
+Off White:         #F7F5F6 | Text and accents
 
 */
 
 /* GLOBAL (base) MOBILE STYLES */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    background-color: #A27A86;
-    color:#331C23;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    font-size: 16px;
+  margin: 0;
+  background-color: #6d3f63;
+  color: #2d0a1b;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
 }
 
-header, main, footer {
-    padding: 1.5rem;
+header,
+main,
+footer {
+  padding: 1.5rem;
 }
 
 header {
-    background-color: #331C23;
-    color: white;
-    text-align: center;
+  background-color: #320b35;
+  color: #c5d2f8;
+  text-align: center;
 }
 
 main {
-    display:grid;
-    grid-template-columns: 1fr;
-    background-color: #77686D;
-    gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #8e839b;
+  gap: 1.5rem;
 }
 
 section {
-    background-color:#ffffff;
-    padding: 1rem;
-    border: 1px solid #A27A86;
-    border-radius: 8px;
+  background-color: #e7ebfa;
+  padding: 1rem;
+  border: 2px solid #c5d2f8;
+  border-radius: 8px;
 }
 
 .project-card {
-    padding: 1rem;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 footer {
-    background-color: #331C23;
-    color: white;
-    text-align: center;
-    padding: 2rem;
+  background-color: #320b35;
+  color: #c5d2f8;
+  text-align: center;
+  padding: 2rem;
 }
-
-
-
 
 /* NAVIGATION STYLES */
 
 nav {
-    background-color: #CB7790;
-    padding: 1rem;
+  background-color: #6d3f63;
+  padding: 1rem;
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+  color: #f7f5f6;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-nav a:hover, nav a:focus {
-    color:#331C23;
+nav a:hover,
+nav a:focus {
+  color: #c5d2f8;
 }
-
-
-
-
 
 /*PROJECT CARDS*/
 .project-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
 
 .project-card {
-    padding: 1.5rem;
+  padding: 1.5rem;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
 /*TYPOGRAPHY*/
-h1, h2, h3 {
-    color: #331C23;
-    margin-top: 0;
+h1,
+h2,
+h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  color: #320b35;
+  margin-top: 0;
 }
 
-header, h1 {
-    font-size: 2rem;
-    color: #ffffff;
-}
-
-h1 {
-    font-size: 1.5rem;
-    margin: 1rem;
+header h1 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2.75rem;
+  color: #c5d2f8;
+  margin: 1rem;
 }
 
 h2 {
-    font-size: 1.25rem;
-    margin-top: 0.75rem ;
+  font-size: 1.75rem;
+  margin-top: 0.75rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-top: 0.75rem;
 }
 
 p {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
-main a:hover, main a:focus {
-    color: #CB7790;
-    text-decoration: underline;
+main a {
+  color: #320b35;
+  font-weight: bold;
 }
 
-
-
-
-
-
-
-
+main a:hover,
+main a:focus {
+  color: #6d3f63;
+  text-decoration: underline;
+}
 
 /* MEDIA QUERIES FOR TABLET AND DESKTOP */
 @media (min-width: 768px) {
-    nav ul {
-        flex-direction: row;
-        justify-content: center;
-        gap: 1.5rem;
-    }
-    main {
-        max-width: 1200px;
-        width: 100%;
-        margin: 0 auto;
-    }
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  main {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
 
-    .project-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-
-
